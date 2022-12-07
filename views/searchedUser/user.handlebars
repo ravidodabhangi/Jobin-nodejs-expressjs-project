@@ -1,0 +1,13 @@
+<h1>searched user</h1>
+
+
+<form action="/company/user" method="post">
+    <input type="text" name="username" placeholder="search user">
+    <button>search</button>
+</form>
+
+
+{{#each search}}
+<h1>{{username}}</h1>
+<h1>{{email}}</h1>
+{{/each}}

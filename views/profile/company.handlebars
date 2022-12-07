@@ -1,0 +1,106 @@
+<section id="company_nav_bar">
+  <article>
+    <h1>JOB</h1>
+    <nav>
+      <ul>
+        <li><a href="/"><i class="fa-solid fa-house"></i><h1>home</h1></a></li>
+        <li><a href="/company/feed"><i class="fa-solid fa-building"></i><h1
+            >Company</h1></a></li>
+        <li><a href="/company/getCompany"><i
+              class="fa-solid fa-building"
+            ></i><h1>companies</h1></a></li>
+      </ul>
+    </nav>
+  </article>
+</section>
+
+<section id="company_section">
+  <h2>company details</h2>
+  <article>
+    <form
+      action="/company/feed"
+      method="post"
+      enctype="multipart/form-data"
+      novalidate
+    >
+      <div class="company_Block">
+        <label for="company_name">Company Name</label>
+        <input type="text" id="company-0" name="company_name" />
+      </div>
+      <div class="company_Block">
+        <label for="company_type">Company type</label>
+        <input type="text" id="company-1" name="company_type" />
+      </div>
+      <div class="company_Block"><label
+          for="company_location"
+        >location</label><input
+          type="text"
+          id="company-2"
+          name="company_location"
+        /></div>
+      <div class="company_Block"><label for="company_employees">Number of
+          Employees works</label><input
+          type="text"
+          id="company-3"
+          name="company_employees"
+        /></div>
+      <div class="company_Block"><label for="company_status">Hiring status</label><input
+          type="text"
+          id="company-4"
+          name="company_status"
+        /></div>
+      <div class="company_Block"><label for="company_image">company image</label><input
+          type="file"
+          id="company-5"
+          name="company_image"
+        /></div>
+      <div class="company_Block"><label for="company_job">Job role</label><input
+          type="text"
+          id="company-6"
+          name="company_job"
+        /></div>
+      <div class="company_Block"><label for="company_job_type">Job type</label><input
+          type="text"
+          id="company-7"
+          name="company_job_type"
+        /></div>
+      <div class="company_Block"><label
+          for="company_experience"
+        >Experience</label><input
+          type="text"
+          id="company-8"
+          name="company_experience"
+        /></div>
+      <div class="company_Block"><label for="company_exp_tech">Experience
+          Technologies</label><input
+          type="text"
+          id="company-9"
+          name="company_exp_tech"
+        /></div>
+      <div class="company_Block"><label for="company_education">Graduation
+          education</label><input
+          type="text"
+          id="company-10"
+          name="company_education"
+        /></div>
+      <div class="company_Block"><label for="company_edu_dept">education dept</label><input
+          type="text"
+          id="company-11"
+          name="company_edu_dept"
+        /></div>
+      <div class="company_Block_textarea"><label
+          for="company_decription"
+        >company decription</label>
+        <textarea
+          name="company_decription"
+          id="company-11"
+          cols="30"
+          rows="8"
+        ></textarea>
+      </div>
+      <div class="btn_div">
+        <button type="submit">add company</button>
+      </div>
+    </form>
+  </article>
+</section>

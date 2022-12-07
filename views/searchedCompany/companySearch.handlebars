@@ -1,0 +1,135 @@
+{{!-- <section id="company_nav_bar">
+  <article>
+    <h1>JOB</h1>
+    <nav>
+      <ul>
+        <li><a href="/"><i class="fa-solid fa-house"></i><h1>home</h1></a></li>
+        <li><a href="/company/feed"><i class="fa-solid fa-building"></i><h1
+            >Company</h1></a></li>
+        <li><a href="/company/getCompany"><i
+              class="fa-solid fa-building"
+            ></i><h1>companies</h1></a></li>
+      </ul>
+    </nav>
+  </article>
+</section> --}}
+<section id="navBar">
+  <article>
+    <aside class="left">
+      <h1>JOB<span>in</span></h1>
+      <form action="/user/searchedCompany" method="post" id="searchCompany">
+        <input type="text" name="company_name" placeholder="Search" />
+       </form>
+    </aside>
+
+    <aside class="right">
+      <ul>
+        <li><a href="http://localhost:5000/user/feed"><i
+              class="fa-solid fa-house-chimney"
+            ></i></a>Home</li>
+        <li><a href="http://localhost:5000/user/profile"><i
+              class="fa-solid fa-user"
+            ></i></a>My Profile</li>
+        <li><a href="http://localhost:5000/user/searchedCompany"><i
+              class="fa-solid fa-briefcase"
+            ></i></a>Jobs</li>
+        <li><a href=""><i
+              class="fa-brands fa-facebook-messenger"
+            ></i></a>messaging</li>
+        <li><a href=""><i class="fa-solid fa-bell"></i></a>notifications</li>
+        <li><a href=""><i class="fa-solid fa-user-vneck"></i></a>Me</li>
+      </ul>
+    </aside>
+  </article>
+</section>
+
+<section class="main_all_company_data">
+  <section id="company_info_section">
+    {{#each search}}
+      <article>
+        <a href="http://localhost:5000/company/object/{{_id}}">
+          <aside class="company_img_aside">
+            <figure>
+              <img src="{{trimString company_image.0.path}}" alt="photo" />
+            </figure>
+          </aside>
+          <aside class="company_containt_aside">
+            <div>
+              <h1>{{company_job}}</h1>
+              <p>{{company_name}}</p>
+              <p>{{company_location}}</p>
+              <p><i class="fa-brands fa-creative-commons-sampling-plus"></i>
+                {{company_status}}
+                recruiting</p>
+            </div>
+            <div>
+            </div>
+          </aside>
+        </a>
+        {{! <button class="comp_detail_save_btn">save</button> }}
+      </article>
+    {{/each}}
+  </section>
+
+  <section id="companyDetail_section">
+    {{#if companySingleObj}}
+      <article>
+        <aside class="com_data-0">
+          <h1>{{companySingleObj.company_job}}</h1>
+          <p
+          >{{companySingleObj.company_name}},{{companySingleObj.company_location}}</p>
+        </aside>
+        <aside class="com_data-1">
+          <p><i
+              class="fa-solid fa-suitcase"
+            ></i>&nbsp;{{companySingleObj.company_job_type}}</p>
+          <p><i
+              class="fa-solid fa-building"
+            ></i>&nbsp;{{companySingleObj.company_employees}}
+            employees,
+            {{companySingleObj.company_type}}</p>
+          <p><i
+              class="fa-brands fa-creative-commons-sampling-plus"
+            ></i>&nbsp;{{companySingleObj.company_status}}
+            recruiting</p>
+        </aside>
+        <aside class="com_data-2">
+          <button class="apply_btn">Apply
+            <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+          <button class="comp_save_btn2">save</button>
+        </aside>
+        <aside class="com_data-3">
+          <p>Role:&nbsp;{{companySingleObj.company_job}}</p>
+          <p>{{companySingleObj.company_decription}}</p>
+        </aside>
+        <aside class="com_data-4">
+          <p><span>what part will you play?</span></p>
+          <p>Experience {{companySingleObj.company_experience}} years</p>
+          <p>Experience in {{companySingleObj.company_exp_tech}}</p>
+          <p><span>use your skills to move the world forward!</span></p>
+          <p>We need a
+            {{companySingleObj.company_education}}
+            graduate in
+            {{companySingleObj.company_edu_dept}}
+            from a college/university of repute and having an excellent academic
+            track record</p>
+          <p>Experience of
+            {{companySingleObj.company_experience}}
+            years in
+            {{companySingleObj.company_exp_tech}}</p>
+          <p>Make your mark in our exciting world at
+            {{companySingleObj.company_name}}.</p>
+          <p>Find out more about Siemens careers at: www.{{companySingleObj.company_name}}.com/careers</p>
+          <p>Job type {{companySingleObj.company_job_type}}</p>
+        </aside>
+      </article>
+      <aside class="Email_send_aside">
+        <a
+          href="http://localhost:5000/company/mail/{{companySingleObj._id}}"
+        ><img src="../../public/images/email.webp" alt="" /></a>
+        <h1 class="apply_xmark"><i class="fa-solid fa-x"></i></h1>
+        <h2>end a resume by email</h2>
+      </aside>
+    {{/if}}
+  </section>
+</section>

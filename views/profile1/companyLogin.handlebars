@@ -1,0 +1,71 @@
+<section id="navBar">
+    <article>
+        <aside class="logoBlock">
+             <ul>
+                <li>
+                   <div> <a href="" class="LOGO"><img src="/images/logo1.jpeg" alt=""></a></div>
+               
+                </li>
+                <li>
+                    
+                <a href="/">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    Home</a>
+                </li>
+                <li>
+                    <a href="#second"><i class="fa-solid fa-suitcase"></i>
+                        Jobs</a>
+                </li>
+                <li>
+                    <a href="#third"><i class="fa-solid fa-people-group"></i>
+                        About</a>
+                </li>
+
+             </ul>
+        </aside>
+        <aside class="btnBlock">
+          <ul>
+            {{#if user}}
+<li>
+    <a href="/profile/logout">logout</a>
+</li>           
+{{else}}
+               <li class="dropdown">
+                <a href="" class="dropbtn">
+                <i class="fa-solid fa-registered"></i>
+                Register</a>
+    <div class="dropdown-content">
+    <a href="/profile/admin">USER</a>
+    {{!-- <a href="/profile/user">USER</a> --}}
+    <a href="/profile/company">COMPANY</a>
+  </div>  
+    </li>
+    <li class="dropdown"><a href="">
+    <i class="fa-solid fa-user"></i>
+    Login</a>
+     <div class="dropdown-content">
+    <a href="/profile/adminLogin">USER</a>
+    {{!-- <a href="#">USER</a> --}}
+    <a href="/profile/companyLogin">COMPANY</a>
+  </div> 
+                </li>
+
+{{/if}}
+            </ul>
+        </aside>
+    </article>
+
+</section>
+
+
+
+<section id="Reg_page">
+    <article>
+        <h1>COMPANY LOGIN HERE</h1>
+        <form action="/profile/adminLogin" method="POST" novalidate>
+            <input type="email" name="email" placeholder="Enter Email">
+            <input type="password" name="password" placeholder="Enter Password">
+            <button>LOGIN</button>
+        </form>
+    </article>
+</section>

@@ -1,0 +1,232 @@
+<section id="navBar">
+  <article>
+    <aside class="left">
+      <h1>JOB<span>in</span></h1>
+      <form action="/user/searchedCompany" method="post" id="searchCompany">
+        <input type="text" name="company_name" placeholder="Search" />
+       </form>
+    </aside>
+
+    <aside class="right">
+      <ul>
+        <li><a href="http://localhost:5000/user/feed"><i
+              class="fa-solid fa-house-chimney"
+            ></i></a>Home</li>
+        <li><a href="http://localhost:5000/user/profile"><i
+              class="fa-solid fa-user"
+            ></i></a>My Profile</li>
+        <li><a href="#"><i
+              class="fa-solid fa-briefcase"
+            ></i></a>Jobs</li>
+        <li><a href=""><i
+              class="fa-brands fa-facebook-messenger"
+            ></i></a>messaging</li>
+        <li><a href=""><i class="fa-solid fa-bell"></i></a>notifications</li>
+        {{!-- <li><a href=""><i class="fa-solid fa-user-vneck"></i></a>Me</li> --}}
+      </ul>
+    </aside>
+  </article>
+</section>
+
+{{!-- <nav>
+    <li><a href="/company/feed">comany filelds</a></li>
+    <li><a href="/company/getCompany">company detail</a></li>
+    <li><a href="/">home</a></li>
+</nav> --}}
+
+
+
+
+
+ {{#each profile}}
+<div id="userProfile1">
+ <img src="{{trimString profile_img.0.path}}" class="profile" alt="">
+</div>
+{{/each}}  
+
+ {{!-- {{#each profile}}
+<div id="smallIcon">
+ <img src="{{trimString profile_img.0.path}}" class="profile" alt="">
+</div>
+{{/each}}  --}}
+
+
+
+{{!-- <form action="/user/searchedCompany" method="post"  id="searchCompany">
+<input type="text" name="company_name" placeholder="search bar">
+<button>search</button>
+</form> --}}
+
+{{#each AllUsers}}
+<section id="UserFeedSection">
+    <aside>
+    <div id="firstDiv">
+
+    </div>
+    <div id="secondDiv">
+    <h5> {{name}}</h5>
+    <h6>{{designation}}</h6>
+   </div>
+   <div id="thirdDiv">
+    <div>
+        <p>Who's viewed your profile</p>
+        <p>79</p>
+    </div>
+    <div>
+        <p>Connections</p>
+        <p>145</p>
+    </div>
+   </div>
+   <div id="fourthDiv">
+    <p>Access exclusive tools & insights</p>
+    <a href="">Try Premium for free</a>
+   </div>
+   <div id="fifthDiv">
+    <i class="fa-solid fa-award"></i>
+    <p>My Items</p>
+   </div>
+   </aside>
+</section>
+{{/each}}
+
+{{!-- {{#each user}}
+<h1>{{email}}</h1>
+{{/each}} --}}
+
+
+<section id="startPost">
+
+ {{#each profile}}
+<div id="profile2">
+ <img src="{{trimString profile_img.0.path}}" class="profile" alt="">
+</div>
+{{/each}} 
+
+
+<form action="/user/feed" method="post" enctype="multipart/form-data">
+<input class="postHere" type="text" name="post" id="" placeholder="post here">
+
+<article>
+<div id="startPhoto"><i class="fa-solid fa-camera"></i>Photo</div>
+<div id="startVideo"><i class="fa-solid fa-video"></i>Video</div>
+<button>post</button>
+</article>
+
+<div class="pi1">
+<input type="file" name="post_img" id="post_img">
+<div>OK</div>
+</div>
+
+<div class="pv1">
+<input type="file" name="post_video" id="post_video">
+<div>OK</div>
+</div>
+
+</form>
+</section>
+
+
+<section id="linkedNews">
+    <article id="newsArticle">
+        <div>
+        <h1>JobIn News</h1>
+        <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <ul>
+            <li>
+                <h3>Uptick in foreign tourist arrivals</h3>
+                <p>2d ago • 994 readers</p>
+            </li>
+            <li>
+                <h3>Big hikes in IT set to fade out</h3>
+                <p>1d ago • 24,327 readers</p>
+            </li>
+            <li>
+                <h3>WhatsApp to allow silent group exit</h3>
+                <p>14h ago • 15,558 readers</p>
+            </li>
+            <li>
+                <h3>IT firm Pactera EDGE to hire 1,500</h3>
+                <p>13h ago • 64,235 readers</p>
+            </li>
+            <li>
+                <h3>Monkeypox: India Updates</h3>
+                <p>2d ago • 14,090 readers</p>
+            </li>
+        </ul>
+
+    </article>
+</section>
+
+
+
+
+
+
+
+{{!-- {{#each p1}}
+<h1>{{post}}</h1>
+<img src="{{trimString post_img.0.path}}" alt="">
+<video src="{{trimString post_video.0.path}}" controls></video>
+<form action="/user/{{_id}}?_method=DELETE" method="post">
+<input type="hidden" name="_method" value="DELETE">
+<button id="delBtn">DELETE</button>
+</form>
+{{/each}} --}}
+
+
+
+<section id="linkedSlider">
+    <article id="linkedArticle">
+
+    {{#each p1}}
+                <h1>{{post}}</h1>
+
+<div class="slider">
+
+        <div class="slide">
+
+            <img src="{{trimString post_img.0.path}}" id="posted_image"  alt="">
+        </div>
+
+        <div class="slide">
+            <video src="{{trimString post_video.0.path}}" id="posted_video" controls  alt="">
+            </video>
+        </div>
+
+
+        <button class="slider__btn slider__btn--left">&#10094;</button>
+        <button class="slider__btn slider__btn--right">&#10095;</button>
+        <div class="dots"></div>
+            <form action="/user/{{_id}}?_method=DELETE" method="post" id="formDelete">
+<input type="hidden" name="_method" value="DELETE">
+<button id="delBtn">DELETE POST</button>
+</form>
+    </div>
+
+
+{{!-- <form action="/user/comment" method="post">
+<input type="text" name="comment">
+    <input type="text" name="comments" id="">
+    <button>comment</button>
+</form> --}}
+
+
+
+
+{{/each}}
+</article>
+</section>
+
+
+
+
+{{!-- {{#each comment}}
+<h1>{{comment}}</h1>
+<h1>{{comments}}</h1>
+{{/each}} --}}
+
+
+
+
+

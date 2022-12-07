@@ -1,0 +1,198 @@
+<section id="navBar">
+    <article>
+        <aside class="logoBlock">
+             <ul>
+                <li>
+                   <div> <a href="" class="LOGO"><img src="/images/logo1.jpeg" alt=""></a></div>
+               
+                </li>
+                <li>
+                    
+                <a href="/">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    Home</a>
+                </li>
+                <li>
+                    <a href="#second"><i class="fa-solid fa-suitcase"></i>
+                        Jobs</a>
+                </li>
+                <li>
+                    <a href="#third"><i class="fa-solid fa-people-group"></i>
+                        About</a>
+                </li>
+
+             </ul>
+        </aside>
+        <aside class="btnBlock">
+          <ul>
+            {{#if user}}
+<li>
+    <a href="/profile/logout">logout</a>
+</li>           
+{{else}}
+               <li class="dropdown">
+                <a href="" class="dropbtn">
+                <i class="fa-solid fa-registered"></i>
+                Register</a>
+    <div class="dropdown-content">
+    <a href="/profile/admin">USER</a>
+    {{!-- <a href="/profile/user">USER</a> --}}
+    <a href="/profile/company">COMPANY</a>
+  </div>  
+    </li>
+    <li class="dropdown"><a href="">
+    <i class="fa-solid fa-user"></i>
+    Login</a>
+     <div class="dropdown-content">
+    <a href="/profile/adminLogin">USER</a>
+    {{!-- <a href="#">USER</a> --}}
+    <a href="/profile/companyLogin">COMPANY</a>
+  </div> 
+                </li>
+
+{{/if}}
+            </ul>
+        </aside>
+    </article>
+
+</section>
+
+<aside>
+<section id="homePage">
+  <video autoplay muted loop id="bg-video">
+        <source src="/images/video.mp4" type="video/mp4" />
+      </video>
+
+  <article>
+    <div class="headingPart">
+
+      <h1>
+         Find Perfect Candidate For Your Company
+      </h1>
+
+<button><a href=""> Contact US</a></button>
+    </div>
+  
+  </article>
+</section>
+
+{{!-- second page --}}
+<section id="second">
+  <h1>Featured JOB</h1>
+  <div class="para">
+  <p>Sometimes a highly motivated client will pay to have their project listed as a featured job. This can help make their projects stand out on Upwork.
+
+For you as a freelancer, seeing the Featured Jobs badge on a post lets you know that the client is very serious about finding a freelancer for this project.</p>
+</div>  
+<div class="threepart">
+<div class="part1">
+  <img src="/images/one.jpg" alt="">
+  <h1>Chef</h1>
+  <p>Chefs Are The Best People On Earth.</p>
+</div>
+<div class="part2">
+  <img src="/images/two.jpg" alt="">
+  <h1>Sanitization</h1>
+  <p>Live life cleaner. Make Earth greener..</p>
+</div><div class="part3">
+  <img src="/images/three.jpg" alt="">
+  <h1>Teacher</h1>
+  <p> Teacher are more valuable than God for </p>
+</div>
+  </div>
+</section>
+<section  id="third">
+  <div class="shadow"></div>
+<article>
+  <h1><u> ABOUT US</u></h1>
+<p>JOBIN is a social networking site designed specifically for the business community. The goal of the site is to allow registered members to establish and document networks of people they know and trust professionally.</p>
+  <p>A JOBIN member’s profile page, which emphasizes skills, employment history and education, has professional network news feeds and a limited number of customizable modules. Basic membership for JOBIN is free. Network members are called “connections.” Unlike other free social networking sites like Facebook or Twitter, JOBIN requires connections to have a pre-existing relationship. 
+
+With basic membership, a member can only establish connections with someone he has worked with, knows professionally (online or offline) or has gone to school with. Connections up to three degrees away (see six degrees of separation) are seen as part of the member's network, but the member is not allowed to contact them through JOBIN without an introduction. Premium subscriptions can be purchased to provide members with better access to contacts in the JOBIN database.</p>
+</article>
+</section>
+ <footer id="footer">
+            <aside>
+                <div class="JOBIN-info">
+                    <div><h1><i>JOBIN</i></h1></div>
+                    <div>
+                        <select name="" id="">
+                            
+                            <option value="">India</option>
+                            <option value="">Canada</option>
+                            <option value="">Brazil</option>
+                            <option value="">Italy</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">English</option>
+                            <option value="">Kannada</option>
+                            <option value="">Hindi</option>
+                            <option value="">Telugu</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="aboutJOBIN">
+                    <div class="aboutJOBIN-1 ">
+                        <div><h1> JOBIN</h1></div>
+                        <div class="about-z">
+                            <a href=""><p>who we are</p></a> 
+                            <a href=""> <p>blog</p></a>
+                            <a href=""><p>work with us</p></a> 
+                            <a href=""><p>investor relation</p></a> 
+                            <a href=""><p>report fraud</p></a>  
+                        </div>
+                    </div>
+                    <div class="aboutJOBIN-1 ">
+                        <div><h1>JOBAVERSE</h1></div>
+                        <div class="about-z">
+                            <a href=""><p>JOBIN</p></a>  
+                            <a href=""><p>feeling india</p></a>  
+                            <a href=""><p>hyperpure</p></a> 
+                            <a href=""><p>land</p></a>  
+                            
+                        </div>
+                    </div>
+                    <div class="aboutJOBIN-1 ">
+                        <div><h1>FOR JOBS</h1></div>
+                        <div class="about-z">
+                            <a href=""><p>partner with us</p></a> 
+                            <a href=""><p>apps for you</p></a> 
+                        </div>
+                        <div class="aboutJOBIN-2"><h1>FOR ENTERPRISES</h1></div>
+                        <div class="about-z ">
+                            <a href=""><p>JOBIN for work</p></a> 
+                            
+                        </div>
+                    </div>
+                    <div class="aboutJOBIN-1 ">
+                        <div><h1>LEARN MORE</h1></div>
+                        <div class="about-z">
+                           <a href=""> <p>privacy</p></a>
+                           <a href=""><p>security</p></a> 
+                           <a href=""><p>terms</p></a> 
+                           <a href=""><p>sitemap</p></a> 
+                            
+                        </div>
+                    </div>
+                    <div class="aboutJOBIN-1 ">
+                        <div><h1>SOCIAL LINKS</h1></div>
+                       <div class="social-icon">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram-square"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube-square"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                       </div>
+                       <div class="app-store">
+                        <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+                        <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+                       </div>
+                    </div>
+                </div>
+                <div class="policy">
+                    <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2022 © JOBIN™ Ltd. All rights reserved.</p>
+                </div>
+            </aside>
+           </footer>
+
+</aside>

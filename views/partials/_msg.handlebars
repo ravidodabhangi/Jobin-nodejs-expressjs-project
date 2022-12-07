@@ -1,0 +1,20 @@
+{{#if SUCCESS_MSG}}
+<h1 class="errorBox" id="suc">{{SUCCESS_MSG}}</h1>
+{{/if}}
+
+{{#if ERROR_MSG}}
+<H1 class="errorBox" style=>{{ERROR_MSG}}</H1>
+{{/if}}
+
+
+{{#if error}}  
+<H1 class="errorBox">{{error}}</H1> 
+{{/if}}
+
+{{#if INFO_MESSAGE}}
+<H1 class="errorBox">{{INFO_MESSAGE}}</H1>
+{{/if}}
+{{!-- <script>
+    let errorBox=document.querySelector(".errorBox");
+console.log(errorBox);
+</script> --}}

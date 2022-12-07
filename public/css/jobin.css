@@ -1,0 +1,1269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#userProfile1 {
+  position: absolute;
+  top: 94px;
+  left: 160px;
+  z-index: 22;
+}
+
+#userProfile1 img {
+  height: 101px;
+  width: 101px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+#company_info_section article {
+  border: 1px solid blue;
+}
+#companyDetail_section {
+  text-transform: capitalize;
+  /* position: absolute;
+    top: 0px;
+    z-index: -1;
+    width: 500px;
+    right: 0; */
+}
+#companyDetail_section p span {
+  font-weight: bold;
+}
+
+#searchCompany {
+  position: relative;
+  left: 250px;
+}
+
+/* ! --------------create profile nd update profile starts here--------- */
+
+#createProfileForm {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecececec;
+}
+#createProfileForm > article {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  background: #fff;
+}
+#createProfileForm > article > form {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+}
+#createProfileForm > article > form > h1 {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: #17a2b8;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+#createProfileForm > article > form > input {
+  width: 80%;
+  padding: 10px;
+  outline: none;
+  border: 1.5px solid #c7c6c6;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  padding-left: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+#createProfileForm > article > form > button {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #17a2b8;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+::placeholder {
+  text-transform: capitalize;
+  letter-spacing: 0.7px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+/* !--------------------create nd update profile ends from here -------------- */
+
+/* !-------------------navBar starts here---------------------------- */
+
+#navBar {
+  width: 100%;
+  height: 60px;
+  background-color: #17a2b8;
+  box-shadow: 0px 2px 6px 0px #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11111111111;
+}
+#navBar > article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navBar > article .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+}
+
+#navBar > article .left h1 {
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 900;
+  position: relative;
+  left: -100px;
+}
+#navBar > article .left h1 span {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+#navBar > article .left input {
+  width: 190%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: #eef3f8;
+  border-radius: 3px;
+  padding-left: 30px;
+  position: relative;
+  left: -290px;
+}
+#navBar > article .left input:focus {
+  border: 2px solid #5d4e65;
+}
+.search i {
+  color: gray;
+  transform: translateX(-375px);
+}
+
+#navBar > article .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+}
+#navBar > article .right ul {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+#navBar > article .right ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+#navBar > article .right ul li:hover {
+  color: #5d4e65;
+}
+#navBar > article .right ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+#navBar > article .right ul li a i:hover {
+  color: #5d4e65;
+}
+
+/* !-------------------navBar ends here---------------------------- */
+body {
+  background: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* slider  */
+
+.slider {
+  max-width: 100rem;
+  height: 41rem;
+  margin: 0px auto;
+  position: relative;
+  z-index: 444;
+  top: -44px;
+  overflow: hidden;
+  left: -20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 41rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* width: 100%;
+    height: 100%; */
+  object-fit: fill;
+}
+
+.slide > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  opacity: 0.8;
+  border: none;
+  background-color: black;
+  /* background: rgba(255, 255, 255, 0.7); */
+  font-family: inherit;
+  color: white;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 8%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 9%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: blue;
+  opacity: 1;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover,
+.next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+#linkedSlider {
+  width: 100%;
+  /* border: 2px solid red; */
+  height: 449px;
+  position: relative;
+  top: -120px;
+}
+
+#linkedArticle {
+  width: 40%;
+  margin: 0 auto;
+  height: 450px;
+  /* border: 2px solid blue; */
+}
+
+#linkedArticle > h1 {
+  position: relative;
+  z-index: 555;
+}
+
+.slider #formDelete {
+  position: relative;
+  z-index: 55555;
+  top: 562px;
+}
+
+.slider #formDelete button {
+  width: 608px;
+  position: relative;
+  top: 51px;
+  height: 43px;
+  left: 0px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid gray;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.slider #formDelete button:hover {
+  background-color: red;
+  color: #fff;
+}
+
+/* User Feed Section  */
+
+#UserFeedSection {
+  width: 226px;
+  height: 357px;
+  /* border: 2px solid gray; */
+  border-radius: 0px;
+  position: relative;
+  left: 96px;
+  top: 17px;
+}
+
+#UserFeedSection #firstDiv {
+  height: 55px;
+  width: 225px;
+  background-color: #fff;
+  border-bottom: 1px solid gray;
+  background-image: url("../../images/profilebg.png");
+  border-radius: 11px 11px 0px 0px;
+}
+
+#UserFeedSection #secondDiv {
+  height: 114px;
+  width: 225px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+#UserFeedSection #secondDiv h5,
+h6 {
+  position: relative;
+  top: 27px;
+  font-size: 16px;
+}
+
+#UserFeedSection #thirdDiv {
+  height: 89px;
+  width: 225px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px solid gray;
+  font-size: 14px;
+}
+
+#UserFeedSection #thirdDiv div:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+#UserFeedSection #thirdDiv div:last-child {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+}
+
+#UserFeedSection #fourthDiv {
+  height: 60px;
+  width: 225px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  font-size: 13px;
+}
+
+#UserFeedSection #fifthDiv {
+  height: 38px;
+  width: 225px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 0px 0px 11px 11px;
+}
+
+/* User Feed Section  */
+
+/* user upload section  */
+
+#startPost {
+  width: 716px;
+  height: 131px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 82px;
+  left: 384px;
+  border-radius: 5px;
+}
+
+#startPost #profile2 img {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  border-radius: 50%;
+}
+
+#startPost .postHere {
+  width: 560px;
+  height: 55px;
+  padding-left: 27px;
+  outline: none;
+  border-radius: 40px;
+  border: 1px solid gray;
+  position: relative;
+  left: -13px;
+  top: -12px;
+}
+
+#post_img {
+  display: none;
+}
+
+#post_video {
+  display: none;
+}
+
+#startPost .pi1 {
+  background-color: #fff;
+  position: absolute;
+  top: 134px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  z-index: 11111;
+  border: 1px solid rgb(202, 192, 192);
+  /* padding: 5px; */
+}
+
+#startPost .pi1 div {
+  background-color: skyblue;
+  padding: 3px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  display: none;
+  /* color: white; */
+}
+
+#startPost .pv1 {
+  background-color: #fff;
+  position: absolute;
+  top: 133px;
+  left: 273px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  z-index: 11111;
+  border: 1px solid rgb(202, 192, 192);
+}
+
+#startPost .pv1 div {
+  background-color: lightgreen;
+  padding: 6px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+}
+
+#startPhoto {
+  cursor: pointer;
+  background: skyblue;
+  width: 90px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+#startVideo {
+  cursor: pointer;
+  background: lightgreen;
+  width: 95px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+#startPost article {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 482px;
+  top: 88px;
+}
+
+#startPost article button {
+  width: 100px;
+  height: 31px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#startPost article button:hover {
+  background-color: crimson;
+  color: #fff;
+  font-size: 17px;
+}
+
+.slider #posted_image {
+  width: 606px;
+  height: 549px;
+}
+
+.slider #posted_video {
+  width: 606px;
+  height: 553px;
+}
+
+/* linked in news  */
+
+#linkedNews {
+  /* border: 2px solid red; */
+  background-color: #fff;
+  width: 315px;
+  height: 326px;
+  position: absolute;
+  top: 82px;
+  right: 44px;
+  border-radius: 11px;
+}
+
+#linkedNews #newsArticle {
+  width: 270px;
+  margin: 9px auto;
+  /* border: 2px solid blue; */
+}
+
+#linkedNews #newsArticle div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0px;
+}
+
+#linkedNews #newsArticle ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#linkedNews #newsArticle ul li h3 {
+  font-size: 15px;
+}
+/* linked in news  */
+
+#errorMessage {
+  position: absolute;
+  z-index: 77777;
+  top: 200px;
+  color: red;
+}
+
+#smallIcon {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 9px;
+  right: 97px;
+  z-index: 11111111111111111111;
+}
+
+#smallIcon > img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 100%;
+  transform: translateX(-31px);
+}
+
+/* Vijay CSS Starts Here  */
+
+/*!----------profile starts  form here-------------  */
+#userProfileMe {
+  margin-top: 50px;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+}
+#userProfileMe > article {
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+#userProfileMe > article .top {
+  width: 100%;
+  height: 35%;
+
+  background-image: url("../images/profilebg.png");
+}
+#userProfileMe > article .middle {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#userProfileMe > article .middle .img figure img {
+  width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 5px solid #e5e5e5;
+    position: absolute;
+    top: 261px;
+    left: 111px;
+}
+
+/* todo----uploaded img---- */
+#userProfile {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 157px;
+  left: 111px;
+}
+#userProfile > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 5px solid #e5e5e5;
+  object-fit: cover;
+}
+
+#userProfileMe > article .middle .name {
+  position: absolute;
+  top: 380px;
+  left: 150px;
+  font-family: "Poppins", sans-serif;
+}
+#userProfileMe > article .middle .name h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #17a2b8;
+}
+#userProfileMe > article .middle .name p {
+  text-transform: capitalize;
+  color: rgba(17, 17, 17, 0.805);
+}
+#userProfileMe > article .middle .deatils {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  position: absolute;
+  top: 300px;
+  right: 200px;
+}
+
+#userProfileMe > article .middle .deatils p i {
+  text-transform: capitalize;
+  font-size: 22px;
+  color: rgba(17, 17, 17, 0.805);
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+#userProfileMe > article .middle .deatils #countryIcon i {
+  color: #17a2b8;
+}
+#userProfileMe > article .middle .deatils #educatioIcon i {
+  color: #111;
+}
+#userProfileMe > article .middle .deatils #cityIcon i {
+  color: yellowgreen;
+}
+
+#userProfileMe > article .middle .deatils p span {
+  color: rgba(17, 17, 17, 0.805);
+  letter-spacing: 0.5px;
+}
+#userProfileMe > article .bottom {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#userProfileMe > article .bottom div a {
+  color: #17a2b8;
+}
+
+#userProfileMe > article .bottom .left {
+  width: 30%;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: capitalize;
+  gap: 5px;
+  padding-left: 50px;
+  color: rgba(17, 17, 17, 0.828);
+}
+
+#userProfileMe > article .bottom .left:hover {
+  background: rgba(204, 204, 204, 0.202);
+}
+#userProfileMe > article .bottom .right:hover {
+  background: rgba(204, 204, 204, 0.202);
+}
+#userProfileMe > article .bottom .last:hover {
+  background: rgba(204, 204, 204, 0.202);
+}
+.cambutton {
+  position: absolute;
+  top: 330px;
+  left: 300px;
+  cursor: pointer;
+}
+.cambutton > i {
+  font-size: 20px;
+  color: gray;
+}
+.cambutton > i:hover {
+  color: #17a2b8;
+}
+.editbutton {
+  position: absolute;
+  top: 225px;
+  right: 80px;
+}
+.editbutton i {
+  font-size: 25px;
+  color: gray;
+}
+.editbutton i:hover {
+  color: #17a2b8;
+}
+#userProfileMe > article .bottom .right {
+  width: 30%;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: capitalize;
+  gap: 5px;
+  padding-left: 50px;
+  color: rgba(17, 17, 17, 0.828);
+}
+#userProfileMe > article .buttom .right:hover {
+  background: #ccc;
+}
+#userProfileMe > article .bottom .last {
+  width: 30%;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: capitalize;
+  gap: 5px;
+  padding-left: 50px;
+  color: rgba(17, 17, 17, 0.828);
+}
+
+#footer {
+  width: 100%;
+  height: 50vh;
+  background: #e5e5e5;
+}
+#footer > article {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: gray;
+}
+#footer > article aside ul {
+  list-style: none;
+}
+#footer > article aside ul li {
+  margin-top: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+#footer > article aside ul li:hover {
+  color: #17a2b8;
+  font-weight: 500;
+}
+#footer > article aside div {
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+#footer > article aside div:hover {
+  color: #17a2b8;
+  cursor: pointer;
+}
+#footer > article aside div i {
+  font-size: 20px;
+}
+#footer > article aside label {
+  font-size: 10px;
+}
+#footer > article aside label:hover {
+  color: #17a2b8;
+  cursor: pointer;
+}
+#footer > article aside select {
+  width: 200px;
+  padding: 7px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: gray;
+  border-radius: 5px;
+}
+#footer > article aside select option {
+  font-size: 10px;
+}
+/* small icon  */
+#smallIcon {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 9px;
+  right: 187px;
+  z-index: 111111111111111;
+}
+#smallIcon > img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 100%;
+  transform: translateX(-31px);
+}
+
+/*!----------profile ends  form here-------------  */
+
+/* todo------------upload profile starts here----------- */
+#uploadProfileModel {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  position: fixed;
+  top: 50px;
+  display: none;
+}
+#uploadProfileModel > article {
+  width: 500px;
+  height: 100px;
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+#uploadProfileModel > article > form {
+  width: 90%;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#uploadProfileModel > article > form > input {
+  width: 50%;
+  height: 30px;
+  padding: 7px;
+  background: #fff;
+  border-radius: 5px;
+}
+#uploadProfileModel > article > form > button {
+  width: 100px;
+  padding: 7px;
+  border: none;
+  outline: none;
+  background: #4ac00e;
+  color: #fff;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.hide {
+  display: block;
+}
+/* todo------------upload profile ends here----------- */
+
+/* Upload flash message */
+#successMessageUpload {
+  position: absolute;
+  top: 106px;
+  right: 80px;
+  color: #4ac00e;
+  font-size: 26px;
+  text-transform: capitalize;
+  padding: 10px;
+  border-radius: 3px;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+/* todo----uploaded img---- */
+#userProfile {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 224px;
+  left: 111px;
+}
+#userProfile > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 5px solid #e5e5e5;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+}
+
+#userProfileMe > article .middle .name {
+  position: absolute;
+    top: 472px;
+    left: 167px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+#userProfileMe > article .middle .name h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #17a2b8;
+}
+#userProfileMe > article .middle .name p {
+  text-transform: capitalize;
+  color: rgba(17, 17, 17, 0.805);
+}
+#userProfileMe > article .middle .deatils {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  position: absolute;
+  top: 395px;
+  right: 200px;
+}
+
+#userProfileMe > article .middle .deatils p i {
+  text-transform: capitalize;
+  font-size: 22px;
+  color: rgba(17, 17, 17, 0.805);
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+#userProfileMe > article .middle .deatils #countryIcon i {
+  color: #17a2b8;
+}
+#userProfileMe > article .middle .deatils #educatioIcon i {
+  color: #111;
+}
+#userProfileMe > article .middle .deatils #cityIcon i {
+  color: yellowgreen;
+}
+
+#userProfileMe > article .middle .deatils p span {
+  color: rgba(17, 17, 17, 0.805);
+  letter-spacing: 0.5px;
+}
+#userProfileMe > article .bottom {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#userProfileMe > article .bottom div a {
+  color: #17a2b8;
+}
+
+#userProfileMe > article .bottom .left {
+  width: 30%;
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    gap: 2px;
+    padding-left: 50px;
+    color: rgba(17, 17, 17, 0.828);
+}
+
+#userProfileMe > article .bottom .left:hover {
+  background: rgba(204, 204, 204, 0.202);
+}
+#userProfileMe > article .bottom .right:hover {
+  background: rgba(204, 204, 204, 0.202);
+}
+#userProfileMe > article .bottom .last:hover {
+  background: rgba(204, 204, 204, 0.202);
+}
+.cambutton {
+  position: absolute;
+  top: 378px;
+  left: 300px;
+  cursor: pointer;
+}
+.cambutton > i {
+  font-size: 20px;
+    color: gray;
+    position: absolute;
+    top: 52px;
+    left: 10px;
+}
+.cambutton > i:hover {
+  color: #17a2b8;
+}
+.editbutton {
+  position: absolute;
+  top: 305px;
+  right: 80px;
+}
+.editbutton i {
+  font-size: 25px;
+    color: gray;
+    transform: translateX(-40px);
+}
+.editbutton i:hover {
+  color: #17a2b8;
+}
+#userProfileMe > article .bottom .right {
+  width: 30%;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 19px;
+  text-transform: capitalize;
+  gap: 5px;
+  padding-left: 50px;
+  color: rgba(17, 17, 17, 0.828);
+}
+#userProfileMe > article .buttom .right:hover {
+  background: #ccc;
+}
+#userProfileMe > article .bottom .last {
+  width: 30%;
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    gap: 5px;
+    padding-left: 50px;
+    color: rgba(17, 17, 17, 0.828);
+}
+
+#footer {
+  width: 100%;
+  height: 50vh;
+  background: #e5e5e5;
+}
+#footer > article {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: gray;
+}
+#footer > article aside ul {
+  list-style: none;
+}
+#footer > article aside ul li {
+  margin-top: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+#footer > article aside ul li:hover {
+  color: #17a2b8;
+  font-weight: 500;
+}
+#footer > article aside div {
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+#footer > article aside div:hover {
+  color: #17a2b8;
+  cursor: pointer;
+}
+#footer > article aside div i {
+  font-size: 20px;
+}
+#footer > article aside label {
+  font-size: 10px;
+}
+#footer > article aside label:hover {
+  color: #17a2b8;
+  cursor: pointer;
+}
+#footer > article aside select {
+  width: 200px;
+  padding: 7px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: gray;
+  border-radius: 5px;
+}
+#footer > article aside select option {
+  font-size: 10px;
+}

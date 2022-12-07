@@ -1,0 +1,11 @@
+<h1>GET user</h1>
+{{#each AllUsers}}
+<h1>name: {{name}}</h1>
+<h1>destination: {{city}}</h1>
+<h1>idustry:{{idustry}}</h1>
+<h1>education:{{education}}</h1>
+<h1>country:{{country}}</h1>
+<h1>city:{{city}}</h1>
+<a href="http://localhost:5000/user/update-user/{{_id}}">update</a>
+
+{{/each}}

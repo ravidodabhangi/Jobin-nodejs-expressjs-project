@@ -1,0 +1,162 @@
+<section id="navBar">
+    <article>
+        <aside class="logoBlock">
+             <ul>
+                <li>
+                    <div> <a href="" class="LOGO"><img src="/images/logo1.jpeg" alt=""></a></div>
+               
+                </li>
+                <li>
+                    
+                <a href="/">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    Home</a>
+                </li>
+                <li>
+                    <a href="#second"><i class="fa-solid fa-suitcase"></i>
+                        Jobs</a>
+                </li>
+                <li>
+                    <a href="#third"><i class="fa-solid fa-people-group"></i>
+                        About</a>
+                </li>
+
+             </ul>
+        </aside>
+        <aside class="btnBlock">
+          <ul>
+            {{#if user}}
+<li>
+    <a href="/profile/logout">logout</a>
+</li>           
+{{else}}
+               <li class="dropdown">
+                <a href="" class="dropbtn">
+                <i class="fa-solid fa-registered"></i>
+                Register</a>
+    <div class="dropdown-content">
+    <a href="/profile/admin">USER</a>
+    {{!-- <a href="/profile/user">USER</a> --}}
+    <a href="/profile/company">COMPANY</a>
+  </div>  
+    </li>
+    <li class="dropdown"><a href="">
+    <i class="fa-solid fa-user"></i>
+    Login</a>
+     <div class="dropdown-content">
+    <a href="/profile/adminLogin">USER</a>
+    {{!-- <a href="#">USER</a> --}}
+    <a href="/profile/companyLogin">COMPANY</a>
+  </div> 
+                </li>
+
+{{/if}}
+            </ul>
+        </aside>
+    </article>
+
+</section>
+
+
+
+
+<section id="Reg_page">
+    <article>
+        <h1>Register For Company</h1>
+          {{#each alert}}
+        <p class="error_Box">{{msg}}</p>
+        {{/each}}
+         <form action="/profile/admin" method="post" novalidate>
+            <input type="text" name="username" placeholder="Enter user name">
+            <input type="email" name="email" placeholder="Enter Email">
+             <div class="eyeBox">
+<input type="password" name="password" placeholder="Enter Password" class="RegPass">
+<span class="eye1"><i class="fa-solid fa-eye-slash"></i></span>
+<span class="eye2" style="display:none"><i class="fa-solid fa-eye"></i></span>
+
+             </div>
+         
+             <div class="eyeBox">
+<input type="password" name="confirmpassword" placeholder="Confirm Password" class="RegPass1">
+<span class="eye1_1"><i class="fa-solid fa-eye-slash"></i></span>
+<span class="eye2_1" style="display:none"><i class="fa-solid fa-eye"></i></span>
+
+             </div>
+            
+            <p>By clicking SUBMIT you agree to the JobIn User</p>
+            <button>Submit</button>
+            <p>Already on JobIn? <a href="/profile/adminLogin">Sign in</a></p>
+        </form>
+    </article>
+
+    <script>
+
+
+ let errorBox=document.querySelectorAll(".error_Box");
+console.log(errorBox);
+errorBox.forEach(alert=>{
+    setTimeout(()=>{
+alert.style.display="none"
+    },3000)
+})
+ 
+
+
+
+ 
+let password=document.querySelector(".RegPass");
+let eye1=document.querySelector(".eye1");
+let eye2=document.querySelector(".eye2");
+console.log(password);
+console.log(eye1);
+console.log(eye2);
+eye1.addEventListener("click",e=>{
+    console.log("hello")
+    if(eye2.style.display=="none")
+    {
+        password.setAttribute("type","text");
+        eye2.style.display="block";
+        eye1.style.display="none";
+    }
+})
+eye2.addEventListener("click",e=>{
+    console.log("hello")
+    if(eye1.style.display=="none")
+    {
+        password.setAttribute("type","password");
+        eye1.style.display="block";
+        eye2.style.display="none";
+    }
+})
+
+
+
+
+
+let password_1=document.querySelector(".RegPass1");
+let eye1_1=document.querySelector(".eye1_1");
+let eye2_1=document.querySelector(".eye2_1");
+console.log(password_1);
+console.log(eye1_1);
+console.log(eye2_1);
+eye1_1.addEventListener("click",e=>{
+    console.log("hello")
+    if(eye2_1.style.display=="none")
+    {
+        password_1.setAttribute("type","text");
+        eye2_1.style.display="block";
+        eye1_1.style.display="none";
+    }
+})
+eye2_1.addEventListener("click",e=>{
+    console.log("hello")
+    if(eye1_1.style.display=="none")
+    {
+        password_1.setAttribute("type","password");
+        eye1_1.style.display="block";
+        eye2_1.style.display="none";
+    }
+})
+</script>
+
+</section>

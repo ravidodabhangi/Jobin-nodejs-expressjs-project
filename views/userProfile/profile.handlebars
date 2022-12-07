@@ -1,0 +1,207 @@
+<section id="navBar">
+  <article>
+    <aside class="left">
+      <h1>JOB<span>in</span></h1>
+      <form action="/user/searchedCompany" method="post" id="searchCompany">
+        <input type="text" name="company_name" placeholder="Search" />
+       </form>
+    </aside>
+
+    <aside class="right">
+      <ul>
+        <li><a href="http://localhost:5000/user/feed"><i
+              class="fa-solid fa-house-chimney"
+            ></i></a>Home</li>
+        <li><a href="http://localhost:5000/user/profile"><i
+              class="fa-solid fa-user"
+            ></i></a>My Profile</li>
+        <li><a href="#"><i
+              class="fa-solid fa-briefcase"
+            ></i></a>Jobs</li>
+        <li><a href=""><i
+              class="fa-brands fa-facebook-messenger"
+            ></i></a>messaging</li>
+        <li><a href=""><i class="fa-solid fa-bell"></i></a>notifications</li>
+        <li><a href=""><i class="fa-solid fa-user-vneck"></i></a>Me</li>
+        <li><a href="http://localhost:5000/profile/adminLogin"><i class="fa-solid fa-right-from-bracket"></i></a>Logout</li>
+      </ul>
+    </aside>
+  </article>
+</section>
+
+{{! <nav>
+    <li><a href="/company/feed">comany filelds</a></li>
+    <li><a href="/company/getCompany">company detail</a></li>
+    <li><a href="/">home</a></li>
+</nav> }}
+
+{{! 
+<form action="/user/searchedCompany" method="post"  id="searchCompany">
+<input type="text" name="company_name" placeholder="search bar">
+<button>search</button>
+</form> }}
+
+{{!-- <h1>USER PAGE</h1>
+
+<form action="/user/profile" method="post" enctype="multipart/form-data">
+    <label for="profile_img"></label>
+    <input type="file" name="profile_img" id="" placeholder="profile image">
+        <button>Upload</button>
+</form>
+
+
+
+
+
+{{#each AllUsers}}
+<div>
+    <h1>Name : {{name}}</h1>
+    <h1>Designation: {{designation}}</h1>
+    <h1>Services :{{idustry}}</h1>
+    <h1>Education : {{education}}</h1>
+    <h1>Country : {{country}}</h1>
+    <h1>City : {{city}}</h1>
+</div>
+{{/each}} --}}
+
+{{!todo--- user-Profile-part starts here }}
+{{#each AllUsers}}
+  <section id="userProfileMe">
+    <article>
+      <aside class="top">
+
+      </aside>
+      <aside class="middle">
+        <div class="img">
+          <figure>
+            <img src="../../images/default-profile-icon.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="name">
+          <h1>{{name}}</h1>
+          <p>{{designation}}</p>
+
+        </div>
+        <div class="deatils">
+          <p id="industryIcon"><i class="fa-solid fa-industry"></i>Industry
+            <span>{{idustry}}</span></p>
+          <p id="educatioIcon"><i
+              class="fa-solid fa-graduation-cap"
+            ></i>Education
+            <span>{{education}}</span></p>
+          <p id="countryIcon"><i class="fa-solid fa-earth-africa"></i>Country
+            <span>{{country}}</span></p>
+          <p id="cityIcon"><i class="fa-solid fa-city"></i>City
+            <span>{{city}}</span></p>
+
+        </div>
+      </aside>
+      <aside class="bottom">
+        <div class="left">
+          <h1>open to work</h1>
+          <p>{{designation}} role</p>
+          <a href="">See all details</a>
+
+        </div>
+        <div class="right">
+          <h1>Share that your are hiring and <br /> qualified candidates</h1>
+          <a href="">Get started</a>
+
+        </div>
+        <div class="last">
+          <h1>Find potentail clients by showing the services you provide</h1>
+          <a href="">Get started</a>
+        </div>
+
+      </aside>
+    </article>
+  </section>
+  {{! edit button }}
+  <div class="editbutton"><a
+      href="http://localhost:5000/user/update-user/{{_id}}"
+    ><i class="fa-solid fa-pen-to-square"></i></a></div>
+
+{{/each}}
+
+<section id="footer">
+  <article>
+    <aside>
+      <ul>
+        <li>About</li>
+        <li>Community guidlines</li>
+        <li>privacy & terms</li>
+        <li>Sales solution</li>
+        <li>safety center</li>
+      </ul>
+    </aside>
+    <aside>
+      <ul>
+        <li>accesibility</li>
+        <li>careers</li>
+        <li>ad choices</li>
+        <li>mobile</li>
+      </ul>
+    </aside>
+    <aside>
+      <ul>
+        <li>talent solution</li>
+        <li>marketing solution</li>
+        <li>advertising</li>
+        <li>small business</li>
+
+      </ul>
+    </aside>
+    <aside>
+      <div>
+        <p><i class="fa-solid fa-circle-question"></i>
+          Questions?<br />
+          visit our help center</p>
+      </div>
+      <div>
+        <p><i class="fa-solid fa-gear"></i>
+          Manage your account and privacy<br />go to your setting</p>
+
+      </div>
+    </aside>
+    <aside>
+      <label for="english">Select your language</label>
+      <br />
+      <select name="" id="english">
+        <option value="English(english)">English(english)</option>
+        <option value="English(english)">Kannada</option>
+        <option value="English(english)">Hindi</option>
+      </select>
+    </aside>
+  </article>
+</section>
+
+{{! upload profile model }}
+<section id="uploadProfileModel" class="hide">
+  <article>
+    <form action="/user/profile" method="post" enctype="multipart/form-data">
+      <label for="profile_img"></label>
+      <input type="file" name="profile_img" id="" placeholder="profile image" />
+      <button>Upload <i class="fa-solid fa-upload"></i></button>
+    </form>
+  </article>
+</section>
+
+{{!todo--- user-Profile-part ends here }}
+
+{{! cam button  }}
+<div class="cambutton"><i class="fa-solid fa-camera"></i></div>
+
+{{! uploaded image }}
+{{#each profile}}
+  <div id="userProfile">
+    <img src="{{trimString profile_img.0.path}}" class="profile" alt="" />
+  </div>
+{{/each}}
+
+{{!todo Small icon for profile }}
+
+{{#each profile}}
+  <div id="smallIcon">
+    <img src="{{trimString profile_img.0.path}}" class="profile" alt="" />
+  </div>
+{{/each}}

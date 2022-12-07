@@ -1,0 +1,19 @@
+<section id="createProfileForm">
+  <article>
+    <form
+  action="/user/update-user/{{Updateuser._id}}?_method=PUT"
+  method="post">
+
+  <h1>Update profile</h1>
+  <input type="hidden" name="_method" value="PUT"/>
+  <input type="text" id="name" name="name" value="{{Updateuser.name}}" />
+  <input type="text" id="designation" name="designation" value="{{Updateuser.designation}}"/>
+  <input type="text" id="idustry" name="idustry" value="{{Updateuser.idustry}}"/>
+  <input type="text" id="education" name="education" value="{{Updateuser.education}}"/>
+  <input type="text" id="country" name="country" value="{{Updateuser.country}}"/>
+  <input type="text" id="city" name="city" value="{{Updateuser.city}}"/>
+<button class="save">update</button>
+  </div>
+</form>
+  </article>
+</section>

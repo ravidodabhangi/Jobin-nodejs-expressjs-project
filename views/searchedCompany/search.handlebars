@@ -1,0 +1,125 @@
+{{!-- <section id="company_nav_bar">
+  <article>
+    <h1>JOB</h1>
+    <nav>
+      <ul>
+        <li><a href="/"><i class="fa-solid fa-house"></i><h1>home</h1></a></li>
+        <li><a href="/company/feed"><i class="fa-solid fa-building"></i><h1
+            >Company</h1></a></li>
+        <li><a href="/company/getCompany"><i
+              class="fa-solid fa-building"
+            ></i><h1>companies</h1></a></li>
+      </ul>
+    </nav>
+  </article>
+</section> --}}
+<section id="navBar">
+  <article>
+    <aside class="left">
+      <h1>JOB<span>in</span></h1>
+      <form action="/user/searchedCompany" method="post" id="searchCompany">
+        <input type="text" name="company_name" placeholder="Search" />
+       </form>
+    </aside>
+
+    <aside class="right">
+      <ul>
+        <li><a href="http://localhost:5000/user/feed"><i
+              class="fa-solid fa-house-chimney"
+            ></i></a>Home</li>
+        <li><a href="http://localhost:5000/user/profile"><i
+              class="fa-solid fa-user"
+            ></i></a>My Profile</li>
+        <li><a href="http://localhost:5000/user/searchedCompany"><i
+              class="fa-solid fa-briefcase"
+            ></i></a>Jobs</li>
+        <li><a href=""><i
+              class="fa-brands fa-facebook-messenger"
+            ></i></a>messaging</li>
+        <li><a href=""><i class="fa-solid fa-bell"></i></a>notifications</li>
+        <li><a href=""><i class="fa-solid fa-user-vneck"></i></a>Me</li>
+      </ul>
+    </aside>
+  </article>
+</section>
+
+
+
+
+<section class="main_all_company_data">
+  <section id="company_info_section">
+    {{#each search}}
+      <article>
+        <a href="http://localhost:5000/company/object/{{_id}}">
+          <aside class="company_img_aside">
+            <figure>
+              <img src="{{trimString company_image.0.path}}" alt="photo" />
+            </figure>
+          </aside>
+          <aside class="company_containt_aside">
+            <div>
+              <h1>{{company_job}}</h1>
+              <p>{{company_name}}</p>
+              <p>{{company_location}}</p>
+              <p><i class="fa-brands fa-creative-commons-sampling-plus"></i>
+                {{company_status}}
+                recruiting</p>
+            </div>
+            <div>
+            </div>
+          </aside>
+        </a>
+        {{!-- <aside class="aside_du_btn">
+          <button class="comp_detail_save_btn">save</button>
+          <a href="update/{{_id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <form action="/company/delete/{{_id}}?_method=DELETE" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button><i class="fa-solid fa-trash-can"></i></button>
+          </form>
+        </aside> --}}
+      </article>
+    {{/each}}
+  </section>
+
+  <section id="companyDetail_section">
+    <article>
+      <aside class="com_data-0">
+        <h1>JavaScript full stack developer</h1>
+        <p>Quess Corp Limited Bengaluru, Karnataka, India (On-site)</p>
+      </aside>
+      <aside class="com_data-1">
+        <p><i class="fa-solid fa-suitcase"></i>&nbsp;Full-time . Entry Level</p>
+        <p><i class="fa-solid fa-building"></i>&nbsp;10,001+ employees, IT
+          Services And IT Consulting</p>
+        <p><i
+            class="fa-brands fa-creative-commons-sampling-plus"
+          ></i>&nbsp;Actively recruiting</p>
+      </aside>
+      <aside class="com_data-2">
+        <button>Apply
+          <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        <button class="comp_save_btn2">save</button>
+      </aside>
+      <aside class="com_data-3">
+        <p>Role:&nbsp;JavaScript full stack developer</p>
+        <p>We provide a host of technology-enabled staffing and managed
+          outsourcing services across processes such as sales & marketing,
+          customer care, after-sales service, back-office operations,
+          manufacturing operations, facilities and security management, HR & F&A
+          operations, IT & mobility services, etc</p>
+      </aside>
+      <aside class="com_data-4">
+        <p><span>what part will you play?</span></p>
+        <p>Experience 2 to 3 years</p>
+        <p>Experience in Golang,Microservices</p>
+        <p><span>use your skills to move the world forward!</span></p>
+        <p>We need a B.E graduate in Computer Science from a college/university
+          of repute and having an excellent academic track record</p>
+        <p>Experience of 2 to 3 years in Golang,Microservices</p>
+        <p>Make your mark in our exciting world at Quess Corp Limited.</p>
+        <p>Find out more about Siemens careers at: www.quesscorp.com/careers</p>
+        <p>Job type Full-Time . Entry Level</p>
+      </aside>
+    </article>
+  </section>
+</section>

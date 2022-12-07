@@ -1,0 +1,13 @@
+<h1>This is comment section</h1>
+
+{{#each comment}}
+<h1>{{comment}}</h1>
+{{/each}}
+
+
+
+<form action="/user/comment" method="post">
+<input type="text" name="comment">
+    <input type="text" placeholder="add comments" name="comments">
+    <button>add comment</button>
+</form>
